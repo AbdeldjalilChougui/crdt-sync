@@ -1,0 +1,25 @@
+[package]
+name = "crdt-sync"
+version = "0.1.0"
+edition = "2021"
+authors = ["Abdeldjalil Chougui"]
+license = "MIT"
+description = "Local-first sync engine: LWW register, OR-set, RGA text and map CRDTs, op log with vector clocks, binary encoding, sqlite storage, axum websocket server and CLI"
+repository = "https://github.com/AbdeldjalilChougui/crdt-sync"
+homepage = "https://github.com/AbdeldjalilChougui/crdt-sync"
+readme = "README.md"
+keywords = ["crdt", "local-first", "sync", "websocket", "sqlite"]
+categories = ["data-structures", "database", "network-programming"]
+include = ["src/**/*", "Cargo.toml", "Cargo.lock", "README.md", "LICENSE", "CITATION.cff"]
+
+[dependencies]
+axum = { version = "0.8.9", features = ["ws"] }
+clap = { version = "4.6.7", features = ["derive"] }
+futures-util = "0.3.34"
+rusqlite = { version = "0.40.2", features = ["bundled"] }
+serde_json = "1.0.154"
+tokio = { version = "1.53.3", features = ["rt-multi-thread", "macros", "net", "sync", "time", "signal"] }
+tokio-tungstenite = "0.30.0"
+
+[dev-dependencies]
+proptest = "1.12.0"
