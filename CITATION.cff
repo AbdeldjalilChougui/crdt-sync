@@ -1,0 +1,13 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it using the metadata from this file."
+type: software
+title: "crdt-sync"
+abstract: "Local-first sync engine: LWW register, OR-set, RGA text and map CRDTs, op log with vector clocks, binary encoding, sqlite storage, axum websocket server and CLI"
+authors:
+  - family-names: Chougui
+    given-names: Abdeldjalil
+version: 0.1.0
+license: MIT
+repository-code: "https://github.com/AbdeldjalilChougui/crdt-sync"
+url: "https://github.com/AbdeldjalilChougui/crdt-sync"
+keywords: [crdt, local-first, sync, websocket, sqlite]
